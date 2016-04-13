@@ -19,6 +19,7 @@ import { Keg } from './keg.model';
 })
 
 export class AppComponent {
+  public empty: Keg;
   public kegs: Keg[];
   constructor() {
     this.kegs = [
@@ -28,6 +29,10 @@ export class AppComponent {
       new Keg("Ripe", "Great Notion Brewing", 6, 7.2),
       new Keg("PBR", "Pabst Brewing Company", 2, 4.5)
     ];
+  }
+  ngOnInit() {
+    this.empty = this.kegs[0];
+    this.empty.pints = 9;
   }
   kegWasSelected(clickedKeg: Keg): void {
     console.log("parent");
