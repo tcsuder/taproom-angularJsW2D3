@@ -1,6 +1,10 @@
 {
   "name": "angular2-skeleton-app",
   "version": "1.0.0",
+  "engines": {
+    "npm": "3.6.0",
+    "node": "5.7.1"
+  },
   "scripts": {
     "start": "npm run tsc:w",
     "tsc": "tsc",
